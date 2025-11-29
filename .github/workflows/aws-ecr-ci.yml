@@ -16,6 +16,10 @@ jobs:
       ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
       IMAGE_TAG: latest
 
+    defaults:
+      run:
+        working-directory: cloud-expense-tracker-api   # 👈 carpeta interna del proyecto
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
